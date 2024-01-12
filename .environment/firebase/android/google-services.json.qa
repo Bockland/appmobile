@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "745949356344",
+    "project_id": "appscencosudscotiabank-qa",
+    "storage_bucket": "appscencosudscotiabank-qa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745949356344:android:c8f464b3459df35befa1cd",
+        "android_client_info": {
+          "package_name": "com.cs.appcard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745949356344-0kmin56tr6f4rkojpeodr6ojn5sm36cj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTyZCnIqOqvKWEs7llhJIBpeDV7V-GEU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745949356344-0kmin56tr6f4rkojpeodr6ojn5sm36cj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745949356344-51ov8dkdhrk8u1297n34mmfbn5853c8p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "cl.scotiabank.csappcard"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

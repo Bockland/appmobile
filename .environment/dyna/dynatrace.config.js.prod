@@ -1,0 +1,58 @@
+module.exports = {
+    react : {
+        debug : false,
+
+        lifecycle : {
+            /**
+             * Decide if you want to see Update Cycles as well
+             */
+            includeUpdate: false,
+
+            /**
+             * Filter for Instrumenting Lifecycle of Components / True = Will be instrumented
+             */
+            instrument: (filename) => {
+                return false;
+            }
+        },
+
+        input : {
+            /**
+             * Allows you to filter the instrumentation for touch events, refresh events and picker events in certain files
+             * True = Will be instrumented
+             */
+            instrument: (filename) => {
+                return true;
+            }
+        }
+    },
+    android : {
+        // Those configs are copied 1:1
+        config : `
+        dynatrace {
+            configurations {
+                defaultConfig {
+                    autoStart {
+                        applicationId 'c497d624-b139-4d2f-b89f-b8056ad14056'
+                        beaconUrl 'https://wqk499.dynatrace-managed.com:9999/mbeacon/437b3db7-c025-4df1-89f6-2935a0a4abc5'
+                    }
+                    userOptIn true
+                }
+            }
+        }
+        `
+    },
+    ios : {
+        // Those configs are copied 1:1
+        config : `
+        <key>DTXApplicationID</key>
+        <string>c497d624-b139-4d2f-b89f-b8056ad14056</string>
+        <key>DTXBeaconURL</key>
+        <string>https://wqk499.dynatrace-managed.com:9999/mbeacon/437b3db7-c025-4df1-89f6-2935a0a4abc5</string>
+        <key>DTXLogLevel</key>
+        <string>ALL</string>
+        <key>DTXUserOptIn</key>
+        <true/>
+        `
+    }
+}

@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {    
+    ext {
+        buildToolsVersion = "34.0.0"
+        minSdkVersion = 26
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+
+        ndkVersion = "24.0.8215888"
+        kotlinVersion = '1.8.0'
+    }
+    repositories {
+        google()
+        mavenCentral()
+        maven {        
+            name = "PRO"    
+            url = "https://facephicorp.jfrog.io/artifactory/maven-pro-fphi"
+            credentials {
+                username = "cencosudscotiabankcl01"
+                password = "cmVmdGtuOjAxOjAwMDAwMDAwMDA6eGNsNkFUckhUUWR3N05NdGNxb2VqU2FEMU5q"
+            }
+        }
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jfrog.buildinfo:build-info-extractor-gradle:4.+")
+    }
+}
+
+apply plugin: "com.jfrog.artifactory"
